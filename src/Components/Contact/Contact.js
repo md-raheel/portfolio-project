@@ -7,21 +7,24 @@ import {
     Grow
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import contactIMG from './Assets/contact.svg';
-import './cover.css';
-import mail from './Assets/mail.svg';
-import linkedin from './Assets/linkedin.svg';
-import github from './Assets/github.svg';
-import phone from './Assets/phone.svg';
+import contactIMG from '../Assets/contact.svg';
+import '../Styles/cover.css';
+import mail from '../Assets/mail.svg';
+import linkedin from '../Assets/linkedin.svg';
+import github from '../Assets/github.svg';
+import phone from '../Assets/phone.svg';
 
 
 const useStyles = makeStyles((theme) => ({
     paper: {
         width: 300,
-        height: 110,
+        height: 115,
         marginBottom: 20,
         paddingTop: 15,
-        border: "1px solid #665df5"
+        border: "1px solid #665df5",
+        '&:hover': {
+            boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.8)",
+          }
     }
 }))
 
@@ -53,16 +56,32 @@ const Contact = () => {
                     <Grid>
                         <Grow in={true} timeout={1800}>
                             <Paper elevation={10} className={classes.paper}>
-                                <img src={linkedin} width="40" alt="linkedin" />
-                                <Typography>m-raheel</Typography>
+                                <a href="https://www.linkedin.com/in/m-raheel"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    textDecoration: "none", color: "black"
+                                }}
+                                >
+                                    <img src={linkedin} width="40" alt="linkedin" />
+                                    <Typography>m-raheel</Typography>
+                                </a>
                             </Paper>
                         </Grow>
                     </Grid>
                     <Grid>
                         <Grow in={true} timeout={1800}>
                             <Paper elevation={10} className={classes.paper}>
-                                <img src={github} width="40" alt="github" />
-                                <Typography>md-raheel</Typography>
+                                <a href="https://github.com/md-raheel"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    textDecoration: "none", color: "black"
+                                }}
+                                >
+                                    <img src={github} width="40" alt="github" />
+                                    <Typography>md-raheel</Typography>
+                                </a>
                             </Paper>
                         </Grow>
                     </Grid>
@@ -76,7 +95,7 @@ const Contact = () => {
                     </Grid>
                 </Grid>
                 <Grid xs={10} sm={6}>
-                    <img className="img" src={contactIMG} width="70%" />
+                    <img className="img" src={contactIMG} alt="contact" width="70%" />
                 </Grid>
             </Grid>
         </div>

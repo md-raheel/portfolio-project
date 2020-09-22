@@ -7,9 +7,8 @@ import {
     Zoom,
     Slide
 } from '@material-ui/core';
-import './Home.css';
-import cover from './Assets/cover.svg';
-import './cover.css';
+import cover from '../Assets/cover.svg';
+import '../Styles/cover.css';
 
 
 const Home = () => {
@@ -37,7 +36,7 @@ const Home = () => {
                         </Typography>
                     </Slide>
                     <div style={{marginTop: 40, marginBottom: 30}}>
-                        <img className="img" src={cover} width="40%" />
+                        <img className="img" src={cover} alt="cover" width="40%" />
                     </div>
                     <Button variant="outlined"
                     style={{
